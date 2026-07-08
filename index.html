@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>默笙夏夏の知書房 — UZI 金牌技能库</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; line-height:1.6; }
+.container { max-width:1200px; margin:0 auto; padding:20px; }
+
+.hero { text-align:center; padding:60px 20px 40px; border-bottom:1px solid #21262d; margin-bottom:40px; }
+.hero h1 { font-size:2.2em; color:#58a6ff; margin-bottom:10px; }
+.hero .subtitle { color:#8b949e; font-size:1.1em; }
+.hero .stats { margin-top:20px; display:flex; justify-content:center; gap:30px; }
+.hero .stat { text-align:center; }
+.hero .stat-num { font-size:2em; color:#f0f6fc; font-weight:700; }
+.hero .stat-label { font-size:0.85em; color:#8b949e; }
+
+.search-bar { margin-bottom:30px; }
+.search-bar input { width:100%; padding:14px 20px; background:#161b22; border:1px solid #30363d; border-radius:8px; color:#c9d1d9; font-size:1em; outline:none; transition:border .2s; }
+.search-bar input:focus { border-color:#58a6ff; }
+
+.category-title { font-size:1.4em; color:#f0f6fc; margin:40px 0 20px; padding-bottom:10px; border-bottom:1px solid #21262d; }
+.category-title .count { font-size:0.7em; color:#8b949e; margin-left:10px; font-weight:400; }
+
+.skill-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:16px; }
+.skill-card { background:#161b22; border:1px solid #21262d; border-radius:8px; padding:20px; transition:border .2s,transform .1s; cursor:default; }
+.skill-card:hover { border-color:#30363d; transform:translateY(-1px); }
+.skill-card.hidden { display:none; }
+
+.skill-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.skill-name { font-weight:600; color:#f0f6fc; font-size:1.05em; }
+.skill-badge { background:rgba(212,167,44,.15); color:#d4a72c; font-size:0.7em; padding:2px 8px; border-radius:10px; white-space:nowrap; margin-left:8px; }
+
+.skill-desc { color:#8b949e; font-size:0.9em; margin-bottom:14px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+
+.skill-meta { display:flex; justify-content:space-between; align-items:center; }
+.skill-tag { font-size:0.8em; color:#58a6ff; background:rgba(88,166,255,.1); padding:2px 10px; border-radius:10px; }
+.skill-version { font-size:0.75em; color:#484f58; }
+
+.footer { text-align:center; padding:40px 20px; margin-top:60px; border-top:1px solid #21262d; color:#484f58; font-size:0.85em; }
+.footer a { color:#58a6ff; text-decoration:none; }
+.footer a:hover { text-decoration:underline; }
+
+.no-results { text-align:center; padding:60px; color:#484f58; font-size:1.2em; display:none; }
+
+@media (max-width:768px) {
+  .skill-grid { grid-template-columns:1fr; }
+  .hero h1 { font-size:1.6em; }
+  .hero .stats { gap:15px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="hero">
+    <h1>📚 默笙夏夏の知書房</h1>
+    <p class="subtitle">UZI 金牌品质 · AI 技能库 · 54 个精心调教的智能体技能</p>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">54</div><div class="stat-label">技能总数</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">分类</div></div>
+      <div class="stat"><div class="stat-num">🥇</div><div class="stat-label">UZI金牌认证</div></div>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="🔍 搜索技能…（输入名称、分类或关键词）" oninput="filterSkills()">
+  </div>
+
+  <div class="no-results" id="no-results">😕 没有找到匹配的技能，试试其他关键词</div>
+
+  
+        <div class="category-section" id="cat-开发工具">
+            <h2 class="category-title">🛠️ 开发工具 <span class="count">15 个技能</span></h2>
+            <div class="skill-grid">
+            <div class="skill-card" data-tags="开发工具 decompose-to-learn">
+                <div class="skill-header">
+                    <span class="skill-name">D2L拆解学习协议</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">D2L 拆解学习触发协议 v1.0 — 框架理论驱动的"反向拆解→桥接→正向重建"全链路系统。 基于 τ-MAD 双向对称管道，实现从成品到设计决策的逐层剥离，再通过 M→M' 桥接协议 将学习到的模式自动注入新产物的构建流程。  **MUST trigger when user:** - 请求反向...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 design-taste-frontend">
+                <div class="skill-header">
+                    <span class="skill-name">前端设计美学</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified design-system meta-skill for landing pages, portfolios, and redesigns. Use when the user asks for web design, frontend UI, landing page, portf...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v2.0.0-merged</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 image-to-code">
+                <div class="skill-header">
+                    <span class="skill-name">图片转代码</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them,...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 imagegen-frontend">
+                <div class="skill-header">
+                    <span class="skill-name">图片生成前端</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified image-generation frontend skill for web landing pages and mobile app screens. Use when the user asks to generate design reference images for w...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 mad-think-pipeline">
+                <div class="skill-header">
+                    <span class="skill-name">MAD-THINK任务管道</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">MAD-THINK 七阶段任务执行管道。每次任务启动时必须首先调用。强制执行 Modeling→Analysis→Design→Testing→Implementation→Normalization→Knowledge 全流程。前一阶段完成并确认后方可进入下一阶段。禁止跳过任何阶段。 适用于所有任...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 skill-creator">
+                <div class="skill-header">
+                    <span class="skill-name">技能创建器</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">创建、编辑、迭代技能。遵循 ZCode Skill Enhancement Standard v3.1 设计规范 + TDD 方法论 + Hermes/UZI Agent 设计模式。 含版本追踪、元数据标签、安全护栏、HARD-GATE Registry、结构化故障产物、故障恢复、完成标准（含数值校...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v3.1.0-hermes</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 skill-ecosystem">
+                <div class="skill-header">
+                    <span class="skill-name">技能生态系统</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Self-evolving skill ecosystem engine. Auto-scans on new skill install, scores quality against Hermes/UZI agent design standards, triggers merge/upgrad...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v2.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 skill-router">
+                <div class="skill-header">
+                    <span class="skill-name">技能路由器</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">按需 Skill 路由器 — 当需要的 skill 不在热层（~/.agents/skills/）中时， 通过本索引查找冷层（~/.agents/skills-archive/）中的 skill， 读取其 SKILL.md 并按指令执行。触发词：按需加载、查找skill、skill索引、 冷门工具、...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 task-quality-gate">
+                <div class="skill-header">
+                    <span class="skill-name">任务质量关</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">任务质量关 — 自动化前置规划 + 后置复盘闭环系统。每次项目任务执行前自动启动 前置规划（任务分析·反模式预警·质量目标·检查清单），任务完成后自动触发后置 复盘（清单对照·质量评分·缺口识别·改进建议），确保输出质量达到满分水平。  **AUTO-TRIGGER on virtually ALL...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 tau-diagnosis-zcode">
+                <div class="skill-header">
+                    <span class="skill-name">τ诊断工具</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc"></p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 tau-mad-pipeline">
+                <div class="skill-header">
+                    <span class="skill-name">τ-MAD管道</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc"></p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 understand">
+                <div class="skill-header">
+                    <span class="skill-name">代码库理解</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Analyze a codebase to produce an interactive knowledge graph mapping architecture, components, and relationships. Use whenever you need to understand ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 understand-dashboard">
+                <div class="skill-header">
+                    <span class="skill-name">代码库仪表盘</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Launch the interactive web dashboard to visually explore a codebase's architecture and knowledge graph. Use when you want to view a codebase visually,...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 understand-explore">
+                <div class="skill-header">
+                    <span class="skill-name">代码库知识图谱</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified knowledge graph explorer. Use when the user wants to query, analyze, explain, or generate onboarding guides from a codebase knowledge graph (k...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 understand-knowledge">
+                <div class="skill-header">
+                    <span class="skill-name">知识库理解</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Analyze a Karpathy-pattern LLM wiki knowledge base and generate an interactive knowledge graph with entity extraction, implicit relationships, and top...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div></div>
+        </div>
+        <div class="category-section" id="cat-效率工具">
+            <h2 class="category-title">⚡ 效率工具 <span class="count">8 个技能</span></h2>
+            <div class="skill-grid">
+            <div class="skill-card" data-tags="效率工具 ab-test-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">A/B测试分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when e...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 cognitive-decision-framework">
+                <div class="skill-header">
+                    <span class="skill-name">认知决策框架</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">认知决策框架 — 融合11位思想家×15本经典著作的完整认知与决策体系。 包含四大模块：12心智模型（理论认知层）→ 25启发式规则+5思维模板（实践决策层） → 12反模式（负向约束层）。适用于复杂决策分析、认知诊断、策略评估、思维纠偏。  **MUST trigger when user:** ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 cohort-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">队列分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and segment-level insights. Use when analyzing user reten...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 first-principles-reasoning">
+                <div class="skill-header">
+                    <span class="skill-name">第一性原理推理引擎</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">第一性推理引擎 v3.3 (AMCDM+MAD-THINK)——六层架构×九维×三层深度。13心智模型（含M13范式滞后）、27启发式（含H26范式滞后警觉+H27白痴指数）、6模板（含T6七步宏观分析）、15反模式、7原子能力、4跨域案例。触发词：复杂问题、系统设计、智能体开发、多维评估、策略规划...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v3.3.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 framework-orchestrator">
+                <div class="skill-header">
+                    <span class="skill-name">统一框架编排器</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">统一框架编排器 — 并行调度 first-principles-reasoning + cognitive-decision-framework + strategic-analysis 三大分析框架，自动合成统一分析报告，解决框架碎片化与手动路由问题。 触发词：/orchestrate、框架协同、...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 review-resume">
+                <div class="skill-header">
+                    <span class="skill-name">简历审查优化</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and stru...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 root-cause-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">根因分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Perform structured root cause analysis using multiple methods: 5 Whys, Fishbone (Ishikawa) Diagram, Causal Chain Mapping, and FMEA. Distinguishes corr...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v2.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 sentiment-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">用户情感分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Analyze user feedback data to identify segments with sentiment scores, JTBD, and product satisfaction insights. Use when analyzing user feedback at sc...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div></div>
+        </div>
+        <div class="category-section" id="cat-投资理财">
+            <h2 class="category-title">📈 投资理财 <span class="count">10 个技能</span></h2>
+            <div class="skill-grid">
+            <div class="skill-card" data-tags="投资理财 contract-risk-scanner">
+                <div class="skill-header">
+                    <span class="skill-name">合同风险扫描</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">合同风险扫描助手 — 在签合同前自动扫描"陷阱条款"并标注风险等级。 支持 6 大类风险扫描（无限责任/单方解除权/交付验收模糊/付款不利/知识产权不清/管辖不利）， 立场加权分析（甲方/乙方/出租方/承租方/采购方/供应方视角）， 输出 3-Sheet Excel 风险报告 + Markdown ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 cost-benefit-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">成本效益分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Perform comprehensive cost-benefit analysis (CBA) with NPV, IRR, ROI, payback period, break-even analysis, BCR calculations, discount rate determinati...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v2.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 draft-nda">
+                <div class="skill-header">
+                    <span class="skill-name">保密协议起草</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Draft a comprehensive Non-Disclosure Agreement (NDA) between two parties with clause-level risk assessment, jurisdiction-specific guidance, key terms ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 finance-bp-toolkit">
+                <div class="skill-header">
+                    <span class="skill-name">财务BP工具箱</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">财务BP工具箱 v1.0 — 覆盖战略解码、预算管理、营销财务、采购供应链、生产运营、研发控制、投资评估 七大经营环节的实战计算工具集。每个工具含明确的输入、输出公式、适用场景及完整使用示例。 支持零基预算、量本利分析、客户盈利矩阵、供应商多维评估、目标成本法、EVA价值管理等核心方法论。 触发词：...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 financial-statement-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">财务报表分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Perform comprehensive financial statement analysis including three-statement linkage, DuPont decomposition, financial ratio analysis across 5 categori...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 industry-analysis-assistant">
+                <div class="skill-header">
+                    <span class="skill-name">行业分析助手</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">行业分析助手 — 基于三层分析架构（信息层→解读层→护栏层）提供多维度行业结构化分析。 覆盖行业景气度、竞争格局、政策环境、技术趋势和风险因素五大维度。  **MUST trigger when user:** - 询问行业分析：分析XX行业、XX行业前景、XX行业怎么样 - 请求行业对比：XX行业...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 internal-control-assessment">
+                <div class="skill-header">
+                    <span class="skill-name">内部控制评估</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Assess internal control systems using the COSO framework across five components: Control Environment, Risk Assessment, Control Activities, Information...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v2.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 privacy-policy">
+                <div class="skill-header">
+                    <span class="skill-name">隐私政策起草</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when crea...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 risk-assessment-matrix">
+                <div class="skill-header">
+                    <span class="skill-name">风险评估矩阵</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Build a comprehensive risk assessment matrix with risk identification, impact×likelihood scoring, heat map visualization, prioritized risk register, m...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v2.2.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 tax-risk-indicators">
+                <div class="skill-header">
+                    <span class="skill-name">税务风险预警</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">税务风险预警指标体系 v1.0 — 金税四期背景下的量化税务风险预警指标计算与监控系统。 覆盖发票类(进销项背离/虚开关联)、特殊业务类(简易计税/免税项目/不征税混淆)、 收入类(申报差异/预收应收偏离/资金流匹配)、成本费用类(费用率偏离/工资社保联动/ 折旧异常/无票支出)四大类14项量化指标...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div></div>
+        </div>
+        <div class="category-section" id="cat-商业运营">
+            <h2 class="category-title">🏢 商业运营 <span class="count">15 个技能</span></h2>
+            <div class="skill-grid">
+            <div class="skill-card" data-tags="商业运营 canvas-strategy">
+                <div class="skill-header">
+                    <span class="skill-name">商业模式画布</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified business model canvas meta-skill. Use when the user asks to create a Lean Canvas, Business Model Canvas, Startup Canvas, or needs help choosin...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 competitive-intelligence">
+                <div class="skill-header">
+                    <span class="skill-name">竞争情报分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified competitive intelligence meta-skill. Use when the user asks for competitor analysis, competitive research, battle cards, competitive landscape...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 create-prd">
+                <div class="skill-header">
+                    <span class="skill-name">PRD需求文档生成</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 customer-journey-map">
+                <div class="skill-header">
+                    <span class="skill-name">客户旅程地图</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Create an end-to-end customer journey map with stages, touchpoints, emotions, pain points, and opportunities. Use when mapping the customer experience...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 market-intelligence">
+                <div class="skill-header">
+                    <span class="skill-name">市场情报分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified market intelligence meta-skill. Use when the user asks to analyze market segments, size a market, estimate TAM/SAM/SOM, profile customer segme...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 maturity-model-assessment">
+                <div class="skill-header">
+                    <span class="skill-name">成熟度模型评估</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Assess organizational capability maturity using established models (CMMI, COBIT, Agile, Digital Transformation, Lean/Operational Excellence, AI/ML Rea...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v2.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 positioning-ideas">
+                <div class="skill-header">
+                    <span class="skill-name">产品定位创意</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors and generates positioning statements with rationale. ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 pre-mortem">
+                <div class="skill-header">
+                    <span class="skill-name">事前验尸风险分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Run a pre-mortem risk analysis on a PRD or launch plan. Categorizes risks as Tigers (real problems), Paper Tigers (overblown concerns), and Elephants ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 prioritization">
+                <div class="skill-header">
+                    <span class="skill-name">优先级排序</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified prioritization meta-skill. Use when the user asks to prioritize features, rank a backlog, triage assumptions, identify risky assumptions, or s...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.1.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 product-direction">
+                <div class="skill-header">
+                    <span class="skill-name">产品方向定义</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified product direction meta-skill covering vision, value proposition, and strategy. Use when the user asks to define product vision, create a produ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 product-ideation">
+                <div class="skill-header">
+                    <span class="skill-name">产品创意构思</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified product ideation meta-skill covering the full discovery cycle. Use when the user asks to brainstorm product ideas, generate feature concepts, ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 story-writing">
+                <div class="skill-header">
+                    <span class="skill-name">用户故事编写</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified story-writing meta-skill for agile requirements. Use when the user asks to write user stories, job stories, acceptance criteria, or product ba...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 strategic-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">战略分析</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Unified strategic analysis meta-skill. Use when the user asks for SWOT analysis, PESTLE analysis, Porter's Five Forces, Ansoff Matrix growth strategy,...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 strategic-analyst">
+                <div class="skill-header">
+                    <span class="skill-name">战略分析师</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">端到端全自动战略分析引擎。一句自然语言触发完整工作流：政策解读→市场调研→可行性评估→战略匹配→资源配置→投资分析→闭环复盘。含量化财务建模(IRR/NPV/DCF)与HARD-GATE质量门控。触发词：分析XX行业、战略分析、政策解读、市场调研、可行性评估、投资评估、项目落地、资源配置、行业前景。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v3.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 user-personas">
+                <div class="skill-header">
+                    <span class="skill-name">用户画像</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Create refined user personas from research data — 3 personas with JTBD, pains, gains, and unexpected insights. Use when building personas from survey ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div></div>
+        </div>
+        <div class="category-section" id="cat-内容创作">
+            <h2 class="category-title">🎨 内容创作 <span class="count">5 个技能</span></h2>
+            <div class="skill-grid">
+            <div class="skill-card" data-tags="内容创作 comic-book-generator">
+                <div class="skill-header">
+                    <span class="skill-name">漫画书生成器</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Generate a B6 comic/picture book PDF from structured Markdown stories with intelligent panel layouts, multi-character dialogue bubbles, chapter title ...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🎨 内容创作</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="内容创作 mirei-diary-studio">
+                <div class="skill-header">
+                    <span class="skill-name">米雷日记工作室</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">米雷日记漫画生产工作室 v1.0。融合漫画风格开发与日记漫画锁定机制的综合技能。覆盖米雷风格手绘日记漫画的全链路生产——从需求摄入、Prompt组装、图像生成、质量审查到前端展示页渲染。含统一配置管理(YAML)、五阶段流水线、4工具适配器、13项自检清单、双轨桥接协议。触发词：米雷风格、Mirei...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🎨 内容创作</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="内容创作 remotion-best-practices">
+                <div class="skill-header">
+                    <span class="skill-name">Remotion最佳实践</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Remotion video project patterns, pitfalls, and optimization techniques distilled from real-world debugging. Covers audio-visual synchronization, trans...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🎨 内容创作</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="内容创作 series-picture-book-generator">
+                <div class="skill-header">
+                    <span class="skill-name">系列绘本生成器</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">系列绘本生成者 — 面向多册绘本系列的全链路生产编排系统。从"一本好绘本" 升级到"一套好绘本"：系列企划→角色圣经→世界观→分册拆解→逐册生成→ 跨册一致性校验→系列合辑输出。不是把一本拆成多本——是让每本既独立成章、 又在系列中承担不可替代的位置。  **MUST trigger when us...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🎨 内容创作</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="内容创作 xia-xiaojie-picture-book">
+                <div class="skill-header">
+                    <span class="skill-name">夏小姐绘本工作室</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">夏小姐绘本工作室 — 智能体原生分层架构。L0常量→L1决策表→L2生成→L3自修正校验→L4输出。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🎨 内容创作</span>
+                    <span class="skill-version">v2.2.0</span>
+                </div>
+            </div></div>
+        </div>
+        <div class="category-section" id="cat-教育学习">
+            <h2 class="category-title">📚 教育学习 <span class="count">1 个技能</span></h2>
+            <div class="skill-grid">
+            <div class="skill-card" data-tags="教育学习 course-assignment-generator">
+                <div class="skill-header">
+                    <span class="skill-name">课程作业生成器</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">课程作业指令自动生成器：输入一个想法或主题，自动生成完整的作业指令文档包，包括结构化指令、提示词、Skill 封装、配套资料清单。适用场景：课程讲师准备作业模板、社群主理人设计 AI 工作流指令、企业培训师制作操作 SOP。只需提供一个主题名即可触发。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📚 教育学习</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div></div>
+        </div>
+
+  <div class="footer">
+    <p>🥇 全部技能通过 UZI 金牌品质认证 · 已在 <a href="#">CodeBuddy 技能广场</a> 上架</p>
+    <p>Created with ❤️ by Mosheng Xiaxia · 54 skills · Open Source</p>
+  </div>
+</div>
+
+<script>
+function filterSkills() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const cards = document.querySelectorAll('.skill-card');
+  const sections = document.querySelectorAll('.category-section');
+  let found = 0;
+  
+  sections.forEach(section => {
+    let sectionHasVisible = false;
+    section.querySelectorAll('.skill-card').forEach(card => {
+      const tags = card.getAttribute('data-tags').toLowerCase();
+      if (!q || tags.includes(q)) {
+        card.classList.remove('hidden');
+        found++;
+        sectionHasVisible = true;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    section.style.display = sectionHasVisible ? '' : 'none';
+  });
+  
+  document.getElementById('no-results').style.display = found === 0 ? 'block' : 'none';
+}
+</script>
+
+</body>
+</html>
