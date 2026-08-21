@@ -68,7 +68,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
     <h1>📚 稽影技能库</h1>
     <p class="subtitle">UZI 金牌品质 · AI 技能库 · 88 个精心调教的智能体技能</p>
     <div class="stats">
-      <div class="stat"><div class="stat-num">72</div><div class="stat-label">技能总数</div></div>
+      <div class="stat"><div class="stat-num">91</div><div class="stat-label">技能总数</div></div>
       <div class="stat"><div class="stat-num">6</div><div class="stat-label">分类</div></div>
       <div class="stat"><div class="stat-num">🥇</div><div class="stat-label">UZI金牌认证</div></div>
     </div>
@@ -82,8 +82,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 
   
         <div class="category-section" id="cat-开发工具">
-            <h2 class="category-title">🛠️ 开发工具 <span class="count">25 个技能</span></h2>
+            <h2 class="category-title">🛠️ 开发工具 <span class="count">29 个技能</span></h2>
             <div class="skill-grid">
+            <div class="skill-card" data-tags="开发工具 capability-extension">
+                <div class="skill-header">
+                    <span class="skill-name">capability-extension</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">能力扩展元技能(合并自 self-upgrade + self-learning-engine)。双模式:upgrade(主动升级——用户说"继续升级改造/每周升级/升级技能/Clone+拆解"时,从 GitHub 项目学习模式升级本站代码:缺口检测→目标发现→Clone拆解→提案→审批执行);re...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="开发工具 comic-layout-engine">
                 <div class="skill-header">
                     <span class="skill-name">comic-layout-engine</span>
@@ -117,6 +128,39 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v2.0.0-merged</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="开发工具 dev-value-gate">
+                <div class="skill-header">
+                    <span class="skill-name">dev-value-gate</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">开发任何插件/功能前的「价值-成本」闸门。在动手实现——尤其要跨包走完整接缝、写全套测试、重生成 catalog、补 Agent Note 与 skill——之前，先对改动做性价比分级，并**中途**主动向用户提示低价值改动的重工风险、给出最小实现或延后选项，杜绝为小便利做过度重工浪费积分。当用户说...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 directory-picker">
+                <div class="skill-header">
+                    <span class="skill-name">directory-picker</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">智析工作台「目录选择器」能力说明——应用内「添加工作区」对话框的「常用位置」侧边栏与拖拽选目录、聊天输入框拖文档自动填路径，以及它的实现接缝和扩展点。当用户提到选择文件夹/目录、工作区目录、常用位置、拖拽选目录、拖文档/文件到输入框、想了解或扩展目录选择器时触发。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 dual-agent-orchestration">
+                <div class="skill-header">
+                    <span class="skill-name">dual-agent-orchestration</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">双 Agent 协同编排 + 通用基础层 v1.0 — 审计工程师 Agent 与财务分析师 Agent 的工程编排层。 覆盖：LangGraph 状态机编排（独立任务/协同任务双工作流 + 状态转移表）、 协同中间件（事件总线/Agent 服务注册/结果聚合/统一任务接口契约）、 本地模型推理（O...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="开发工具 expert-mode-tool">
                 <div class="skill-header">
                     <span class="skill-name">expert-mode-tool</span>
@@ -148,6 +192,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                 <div class="skill-meta">
                     <span class="skill-tag">🛠️ 开发工具</span>
                     <span class="skill-version">v1.1.1</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="开发工具 financial-modeling">
+                <div class="skill-header">
+                    <span class="skill-name">financial-modeling</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">投行级财务建模引擎 — 三表联动预测模型（Assumptions→Schedules→IS/CF/BS→Checks→Dashboard）的构建与交付。openpyxl 写活公式 → LibreOffice 无头重算 → 4 项勾稽断言校验三段式流水线，输出带活公式的 .xlsx 模型本体 + 敏感...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.5.0</span>
                 </div>
             </div>
             <div class="skill-card" data-tags="开发工具 governance-guard">
@@ -205,6 +260,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v1.0.0</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="开发工具 obsidian-kb-guard">
+                <div class="skill-header">
+                    <span class="skill-name">obsidian-kb-guard</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Obsidian 知识库质量守护:批量质检、frontmatter 标准化、Wikilink 统一、标签精简、自动修复管道。触发词:Obsidian、知识库、vault、笔记质检、Wikilink、frontmatter 标准化、知识库升级。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🛠️ 开发工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="开发工具 picture-book-creator">
                 <div class="skill-header">
                     <span class="skill-name">picture-book-creator</span>
@@ -221,21 +287,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-name">pipeline-governance</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc">管道治理引擎 v1.0 — 合并 tao-theory-ops + tau-mad-pipeline 两大内部执行协议。双模式：/pipeline run (τ-MAD 八阶段门禁管道 M-A-D-T-H-I-N-K-Ω) + /pipeline check (约束校验+证据管理)。全离线·τ最小化...</p>
+                <p class="skill-desc">已归档:本技能是 framework-orchestrator 的内部执行协议(τ-MAD 八阶段门禁 + 约束治理),原定位即"非顶层入口,framework-orchestrator 是统一任务入口"。触发管道执行/约束治理类任务时,请加载 framework-orchestrator。原文归档...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🛠️ 开发工具</span>
-                    <span class="skill-version">v1.1.0</span>
-                </div>
-            </div>
-            <div class="skill-card" data-tags="开发工具 product-design-analyzer">
-                <div class="skill-header">
-                    <span class="skill-name">product-design-analyzer</span>
-                    <span class="skill-badge">🥇 UZI</span>
-                </div>
-                <p class="skill-desc">产品设计拆解与内容设计学习引擎。 输入任何产品的截图/URL/描述，自动执行 L1 第一性原理拆解 → L2 六维深度推理 → L3 认识/模仿/创新/超越 全链路分析 > ⚠️ OVERLAP NOTICE: 本技能与 decompose-to-learn 有 ~70% 功能重叠（L1→L2→L3...</p>
-                <div class="skill-meta">
-                    <span class="skill-tag">🛠️ 开发工具</span>
-                    <span class="skill-version">v2.1.0</span>
+                    <span class="skill-version">v1.0.0</span>
                 </div>
             </div>
             <div class="skill-card" data-tags="开发工具 security-pentest">
@@ -254,10 +309,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-name">self-learning-engine</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc"></p>
+                <p class="skill-desc">已合并入 capability-extension(rescue 模式)。遇到工具缺失/安装失败/能力不足等信号时,请加载 capability-extension 技能。本文件仅为重定向 stub,原文归档于 ~/.agents/skills/.archived/self-learning-eng...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🛠️ 开发工具</span>
-                    <span class="skill-version">v1.0.0</span>
+                    <span class="skill-version">v1.2.0</span>
                 </div>
             </div>
             <div class="skill-card" data-tags="开发工具 self-upgrade">
@@ -265,18 +320,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-name">self-upgrade</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc">触发: 用户说"继续升级改造""每周升级""自我改造""升级技能""Clone+拆解"。 与 skill-optimizer 的区别: skill-optimizer 优化已有 Skill 文件，self-upgrade 从 GitHub 项目中学习新模式并升级本站代码。 不适用: 纯信息查询 · ...</p>
-                <div class="skill-meta">
-                    <span class="skill-tag">🛠️ 开发工具</span>
-                    <span class="skill-version">v1.0.0</span>
-                </div>
-            </div>
-            <div class="skill-card" data-tags="开发工具 shiyanwen-financial-advisor">
-                <div class="skill-header">
-                    <span class="skill-name">shiyanwen-financial-advisor</span>
-                    <span class="skill-badge">🥇 UZI</span>
-                </div>
-                <p class="skill-desc">基于石彦文老师(首都经贸大学会计学院副教授·41年财税实战经验)财务分析方法论， 自动生成企业管理建议书。支持Excel/CSV财务报表上传或CLI逐项录入， 输出七阶段分析(盈利能力/偿债能力/营运能力/成长能力/现金流/杜邦分解)+ 行业对标+Markdown/Word双格式建议书。 触发词: ...</p>
+                <p class="skill-desc">已合并入 capability-extension(upgrade 模式)。触发"继续升级改造/每周升级/升级技能/Clone+拆解"等任务时,请加载 capability-extension 技能。本文件仅为重定向 stub,原文归档于 ~/.agents/skills/.archived/sel...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🛠️ 开发工具</span>
                     <span class="skill-version">v1.0.0</span>
@@ -293,12 +337,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v2.0.0</span>
                 </div>
             </div>
-            <div class="skill-card" data-tags="开发工具 skill-meta-ops">
+            <div class="skill-card" data-tags="开发工具 stock-financial-report">
                 <div class="skill-header">
-                    <span class="skill-name">skill-meta-ops</span>
+                    <span class="skill-name">stock-financial-report</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc">[实验性·按需启用] 技能元操作引擎 v1.0 — 合并 skill-genome-compiler + skill-supernode。双模式：/skill-compile (问题嵌入→稀疏路由→基因组装, 100+基因池×13域×6突变) + /skill-collab (9预定义Superno...</p>
+                <p class="skill-desc">公开财报分析工作流——给一个 A 股代码，自动拉公开财报、算指标、勾稽验证、出分析报告。用 akshare 拉 100% 公开数据（任何人可复现），复用 financial-statement-analysis 的六阶段方法 + financial-data-access 的拉数接口。触发词：分析股...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🛠️ 开发工具</span>
                     <span class="skill-version">v1.0.0</span>
@@ -353,7 +397,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-name">vision-proxy</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc">多模态视觉理解引擎 — 基于 DeepSeek Vision Proxy v2.3 + Ollama minicpm-v:8b 本地视觉模型，为 Agent 提供图片识别/文字提取/视频帧分析的端到端能力。触发词：看图、识别图片、图片识别、多模态、视觉、vision、图片理解、读图</p>
+                <p class="skill-desc">已弃用:视觉任务请使用 DSH 内置 tool-vision 工具(默认模型 llama3.2-vision:11b,本机 Ollama 已有)。原内容(自定义代理链/降级路径)归档于 ~/.agents/skills/.archived/vision-proxy/。触发词:看图、识别图片、图片识别...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🛠️ 开发工具</span>
                     <span class="skill-version">v1.1.0</span>
@@ -361,7 +405,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
             </div></div>
         </div>
         <div class="category-section" id="cat-效率工具">
-            <h2 class="category-title">⚡ 效率工具 <span class="count">15 个技能</span></h2>
+            <h2 class="category-title">⚡ 效率工具 <span class="count">19 个技能</span></h2>
             <div class="skill-grid">
             <div class="skill-card" data-tags="效率工具 ab-test-analysis">
                 <div class="skill-header">
@@ -429,6 +473,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v1.1.0</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="效率工具 financial-bp-analysis">
+                <div class="skill-header">
+                    <span class="skill-name">financial-bp-analysis</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">财务BP经营分析引擎 — 把抽象经营目标拆成「可量化、可执行、可验证」的动作并闭环。 四方法：①业务拆解三步法+价值链拆解 ②KPI量价漏斗拆解(销售额=客流量×转化率×连带率×单价+PDCA闭环) ③产品盈利结构分析(单品毛利率穿透+三分类+销售配重优化) ④定价决策(三要素+四步+价格杠杆+成本...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="效率工具 first-principles-reasoning">
                 <div class="skill-header">
                     <span class="skill-name">第一性原理推理引擎</span>
@@ -451,6 +506,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v3.1.0</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="效率工具 liurun-perspective">
+                <div class="skill-header">
+                    <span class="skill-name">liurun-perspective</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">[实验性·按需启用] 刘润（润米咨询创始人、前微软战略合作总监、《底层逻辑》作者）的思维框架与表达方式。 基于 124 个来源（一手占比 55%）的深度调研，提炼 6 个核心心智模型、10 条决策启发式和完整表达 DNA。 用途：作为思维顾问，用刘润的视角分析商业/决策/成长问题、审视决策、提供反馈...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="效率工具 methodology-decision">
                 <div class="skill-header">
                     <span class="skill-name">methodology-decision</span>
@@ -460,6 +526,28 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                 <div class="skill-meta">
                     <span class="skill-tag">⚡ 效率工具</span>
                     <span class="skill-version">v2.1.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 mistake-to-method">
+                <div class="skill-header">
+                    <span class="skill-name">错误→方法复盘</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">「错误→方法」收尾复盘习惯。每次非平凡改动交付、踩坑、返工或被打回之后，从这次过程里提炼出可复用的方法/工作流（不是功能本身），过价值闸门只留价值最高的 1-2 条、用最少 token 记入最便宜的家（记忆/skill/Agent Note），并交叉引用已有技能避免重复造。当用户说「复盘/沉淀/这次...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="效率工具 nuwa-skill">
+                <div class="skill-header">
+                    <span class="skill-name">nuwa-skill</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">女娲·Skill造人术——把任意人名/主题（甚至模糊需求）蒸馏成一个可运行的「人物/主题视角」Skill。 与 cangjie-skill（蒸馏书）互补，是它的官方配套件。两种入口：(1)明确人名→直接蒸馏 (2)模糊需求→诊断推荐→再蒸馏。 触发词：「造skill」「蒸馏XX」「女娲」「造人」「X...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">⚡ 效率工具</span>
+                    <span class="skill-version">v1.0.0</span>
                 </div>
             </div>
             <div class="skill-card" data-tags="效率工具 review-resume">
@@ -530,8 +618,30 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
             </div></div>
         </div>
         <div class="category-section" id="cat-投资理财">
-            <h2 class="category-title">📈 投资理财 <span class="count">11 个技能</span></h2>
+            <h2 class="category-title">📈 投资理财 <span class="count">18 个技能</span></h2>
             <div class="skill-grid">
+            <div class="skill-card" data-tags="投资理财 audit-analyst-cross-validation">
+                <div class="skill-header">
+                    <span class="skill-name">audit-analyst-cross-validation</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">审计×分析交叉验证中枢 v1.0 — 双 Agent 联动价值升华的核心模块。 消费审计工程师 Agent（鉴证结论）与财务分析师 Agent（经营诊断）的标准 JSON 结果， 执行五大维度交叉校验（数据口径一致性/异常点双向印证/业务逻辑闭环/风险等级校准/证据链完整性）， 并按三级分歧流程处理...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 audit-engineer-agent">
+                <div class="skill-header">
+                    <span class="skill-name">audit-engineer-agent</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">审计工程师 Agent 集群 v1.0 — 财务报表审计主干程序的唯一执行入口。 四子 Agent 分工（审计规划/审计执行/审计验证/审计报告），覆盖现有技能库完全缺失的 鉴证核心：重要性水平计算、函证生成、抽凭抽样、截止测试、工作底稿编制、 试算平衡表、审计调整分录、错报汇总、审计报告编制、审计...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="投资理财 contract-risk-scanner">
                 <div class="skill-header">
                     <span class="skill-name">合同风险扫描</span>
@@ -554,6 +664,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v2.0.0</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="投资理财 data-report-builder">
+                <div class="skill-header">
+                    <span class="skill-name">data-report-builder</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">数据汇总报表构建器 — 将数据提取结果转化为「可复核、可追溯、可交付」的结构化报表。内置六层结构法(标题/表头/分组/数据/汇总/说明)、微软蓝配色(Excel经典蓝)、数据质量校验(累计≠分年之和自动检出)、健壮xlsx读取(非法样式降级修复)、评分客观化。触发词：数据汇总、报表生成、表格整理、数...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="投资理财 draft-nda">
                 <div class="skill-header">
                     <span class="skill-name">保密协议起草</span>
@@ -563,6 +684,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                 <div class="skill-meta">
                     <span class="skill-tag">📈 投资理财</span>
                     <span class="skill-version">v1.0.1</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 equity-transfer-statement">
+                <div class="skill-header">
+                    <span class="skill-name">equity-transfer-statement</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">股权转让·税务情况说明工作流。当用户拖入或提供标的公司（建安/工程类）财务 Excel（如「创拓2025年定数情况.xlsx」）并要做「股转情况说明 / 税务情况说明 / 股权转让复核 / 纳税调整说明」时触发：按六模块→五问映射，用 parse_document 读表 + run_code 复算勾...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
                 </div>
             </div>
             <div class="skill-card" data-tags="投资理财 financial-data-access">
@@ -620,6 +752,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v1.0.0</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="投资理财 management-advisory">
+                <div class="skill-header">
+                    <span class="skill-name">management-advisory</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">企业管理顾问建议书生成(合并自 liurun-fengtang-advisor + shiyanwen-financial-advisor)。双模式:liurun-fengtang(刘润商业洞察+冯唐管理咨询,输出六章战略建议书)、shiyanwen(石彦文财务诊断,输出七阶段财务建议书)。触发词:...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="投资理财 privacy-policy">
                 <div class="skill-header">
                     <span class="skill-name">隐私政策起草</span>
@@ -629,6 +772,28 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                 <div class="skill-meta">
                     <span class="skill-tag">📈 投资理财</span>
                     <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 shiyanwen-financial-advisor">
+                <div class="skill-header">
+                    <span class="skill-name">shiyanwen-financial-advisor</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">已合并入 management-advisory(shiyanwen 模式)。触发"石彦文/财务报表分析/财务诊断/财税顾问"等任务时,请加载 management-advisory 技能。本文件仅为重定向 stub,原文归档于 ~/.agents/skills/.archived/shiyanwe...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="投资理财 sp-replacement-eval">
+                <div class="skill-header">
+                    <span class="skill-name">sp-replacement-eval</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">国产替代 SP 评估 — A股个股「国产替代」板块识别 + S轴(替代进度 S1/S2/S3 基本面) + P轴(技术面 量/价/人/财/评 五维) + SP综合评级矩阵 + 仓位建议。 数据用 akshare 本地拉取(行情/财务/估值)，离线计算，不依赖外部 API。 触发词：国产替代、SP评估...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">📈 投资理财</span>
+                    <span class="skill-version">v1.1.0</span>
                 </div>
             </div>
             <div class="skill-card" data-tags="投资理财 supply-chain-collaboration">
@@ -655,7 +820,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
             </div></div>
         </div>
         <div class="category-section" id="cat-商业运营">
-            <h2 class="category-title">🏢 商业运营 <span class="count">11 个技能</span></h2>
+            <h2 class="category-title">🏢 商业运营 <span class="count">15 个技能</span></h2>
             <div class="skill-grid">
             <div class="skill-card" data-tags="商业运营 canvas-strategy">
                 <div class="skill-header">
@@ -663,6 +828,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
                 <p class="skill-desc">Unified business model canvas meta-skill. Use when the user asks to create a Lean Canvas, Business Model Canvas, Startup Canvas, or needs help choosin...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 construction-reconciliation">
+                <div class="skill-header">
+                    <span class="skill-name">construction-reconciliation</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">建安项目款项三方核对工作流。当用户拖入或提供建安/工程企业的「合同表 + 付款/拨款台账 + 发票台账 + 结算明细」并要做「项目对账 / 结算核对 / 合同付款核对 / 拨款与发票核对 / 代垫费用抵减 / 往来抵减」时触发：按项目与年度把合同↔款项↔发票/结算三方对齐，算未付/差异/累计vs分年...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🏢 商业运营</span>
                     <span class="skill-version">v1.0.0</span>
@@ -690,12 +866,23 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v1.0.0</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="商业运营 literary-quality-standards">
+                <div class="skill-header">
+                    <span class="skill-name">literary-quality-standards</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">文学出版级质量标准(六维):对标《收获》《人民文学》《十月》《花城》《当代》《钟山》的纯文学刊物水准。按需用于纯文学/刊物投稿文本的出版级打磨;不适用于网文连载(网文快节奏标准见 novel-serial-writing)。触发词:文学质量、出版级、刊物投稿、纯文学、文学打磨、文学水准。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="商业运营 liurun-fengtang-advisor">
                 <div class="skill-header">
                     <span class="skill-name">liurun-fengtang-advisor</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc">基于刘润老师商业洞察方法论(底层逻辑·OGSM·增长飞轮·四大护城河)和 冯唐老师管理咨询方法论(MECE·金字塔原理·成事心法·BCG矩阵)， 自动生成企业咨询管理建议书。 输入行业数据/战略计划/商业模式/经营数据， 输出六章建议书(现状诊断/行业分析/战略优化/商业模式改进/经营提升/风险预案...</p>
+                <p class="skill-desc">已合并入 management-advisory(liurun-fengtang 模式)。触发"刘润/冯唐/管理咨询/商业洞察/战略建议"等任务时,请加载 management-advisory 技能。本文件仅为重定向 stub,原文归档于 ~/.agents/skills/.archived/li...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🏢 商业运营</span>
                     <span class="skill-version">v1.0.0</span>
@@ -734,6 +921,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-version">v1.1.0</span>
                 </div>
             </div>
+            <div class="skill-card" data-tags="商业运营 product-design-analyzer">
+                <div class="skill-header">
+                    <span class="skill-name">product-design-analyzer</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">已合并入 decompose-to-learn 的 product-design 模式。分析具体产品/页面/UI(截图/URL/描述)时,请加载 decompose-to-learn 技能并使用其 product-design 模式。本文件仅为重定向 stub,原文归档于 ~/.agents/ski...</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v2.0.0</span>
+                </div>
+            </div>
             <div class="skill-card" data-tags="商业运营 product-ideation">
                 <div class="skill-header">
                     <span class="skill-name">产品创意构思</span>
@@ -743,6 +941,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                 <div class="skill-meta">
                     <span class="skill-tag">🏢 商业运营</span>
                     <span class="skill-version">v1.0.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="商业运营 public-account-writing">
+                <div class="skill-header">
+                    <span class="skill-name">public-account-writing</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">公众号爆文写作方法论(解构自孤独大脑《价格区间与目的地消费品》等):概念遍历深度文7段式、商业观点传播文4段式、知识分享说明书文7段式变体。借鉴结构而非内容,模仿思维而非文字。触发词:公众号文章、爆文、公众号写作、知识分享、说明书、写文章、对比分析。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🏢 商业运营</span>
+                    <span class="skill-version">v1.2.0</span>
                 </div>
             </div>
             <div class="skill-card" data-tags="商业运营 story-writing">
@@ -787,7 +996,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-name">anti-ai-writing</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc"></p>
+                <p class="skill-desc">反AI味·自然写作铁律:消除AI生成文本的机械特征,模拟真实人类写作习惯(对照张爱玲/余华/王小波/鲁迅/金庸文本)。适用于小说与内容输出的文字打磨。触发词:反AI味、去AI味、AI味太重、文字太机械、像人写的、自然写作。</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🎨 内容创作</span>
                     <span class="skill-version">v1.0.0</span>
@@ -809,29 +1018,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-name">cinematic-video-generator</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc"></p>
+                <p class="skill-desc">电影级视频生成器(F1/速度与激情/阿德勒绘本三项目经验固化):Seedream 5.0 画面底座 → Remotion 运镜特效字幕 → numpy 程序化音效 → ffmpeg 混音/流拷贝交付。触发词:电影级视频、赛车视频、F1、宣传片、视觉冲击、高品质视频制作、预告片、混剪。</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🎨 内容创作</span>
-                    <span class="skill-version">v1.0.0</span>
+                    <span class="skill-version">v1.2.0</span>
                 </div>
             </div>
-            <div class="skill-card" data-tags="内容创作 literary-quality-standards">
+            <div class="skill-card" data-tags="内容创作 novel-serial-writing">
                 <div class="skill-header">
-                    <span class="skill-name">literary-quality-standards</span>
+                    <span class="skill-name">novel-serial-writing</span>
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
-                <p class="skill-desc"></p>
-                <div class="skill-meta">
-                    <span class="skill-tag">🎨 内容创作</span>
-                    <span class="skill-version">v1.0.0</span>
-                </div>
-            </div>
-            <div class="skill-card" data-tags="内容创作 public-account-writing">
-                <div class="skill-header">
-                    <span class="skill-name">public-account-writing</span>
-                    <span class="skill-badge">🥇 UZI</span>
-                </div>
-                <p class="skill-desc"></p>
+                <p class="skill-desc">中文连载小说创作与质检工作流。触发词:写新章节、开新章、扩写章节、写小说、小说质检、错别字检查、我的嘴开过光、乌鸦嘴、言出法随、下一章、续写。 五步流程:①读 写作上下文.md(人物状态/时间线/金手指/章节索引) → ②写/扩写章节(遵守扩写铁律) → ③跑 python3 qc.py 质检(硬错...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🎨 内容创作</span>
                     <span class="skill-version">v1.0.0</span>
@@ -854,6 +1052,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
                     <span class="skill-badge">🥇 UZI</span>
                 </div>
                 <p class="skill-desc">响应匠艺·元技能。公众号文章写作+复杂问题回复自动激活。 触发词：写文章、生成发布版、回复用户、交付总结、会话交接。 不触发：纯信息查询、单步文件操作、简单问答。 不适用于：小说创作（见§12.13）、分析类文章架构（见§4.4c）。</p>
+                <div class="skill-meta">
+                    <span class="skill-tag">🎨 内容创作</span>
+                    <span class="skill-version">v1.4.0</span>
+                </div>
+            </div>
+            <div class="skill-card" data-tags="内容创作 series-history-writing">
+                <div class="skill-header">
+                    <span class="skill-name">series-history-writing</span>
+                    <span class="skill-badge">🥇 UZI</span>
+                </div>
+                <p class="skill-desc">Use when writing a historical short story or series where a small ordinary person witnesses a major historical moment — 小人物见证大历史、崇祯/明末、剃发令/剃头、煤山、守城、历史...</p>
                 <div class="skill-meta">
                     <span class="skill-tag">🎨 内容创作</span>
                     <span class="skill-version">v1.0.0</span>
@@ -900,7 +1109,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 
   <div class="footer">
     <p>🥇 全部技能通过 UZI 金牌品质认证 · 已在 <a href="#">CodeBuddy 技能广场</a> 上架</p>
-    <p>Created with ❤️ by 稽影 · 72 skills · Open Source</p>
+    <p>Created with ❤️ by 稽影 · 91 skills · Open Source</p>
   </div>
 </div>
 
